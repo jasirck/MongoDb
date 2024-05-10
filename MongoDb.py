@@ -1,3 +1,36 @@
+// Display all databases
+show dbs
+
+// Switch to a specific database or create a new one
+use myDatabase
+
+// Display all collections in the current database
+show collections
+
+// Insert a single document into a collection
+db.myCollection.insertOne({ key: "value" })
+
+// Insert multiple documents into a collection
+db.myCollection.insertMany([{ key1: "value1" }, { key2: "value2" }])
+
+// Query for documents in a collection
+db.myCollection.find()
+
+// Update a document in a collection
+db.myCollection.updateOne({ key: "value" }, { $set: { key: "new_value" } })
+
+// Remove a document from a collection
+db.myCollection.deleteOne({ key: "value" })
+
+// Create an index on a field
+db.myCollection.createIndex({ key: 1 })
+
+// Display existing indexes on a collection
+db.myCollection.getIndexes()
+
+// Drop an index from a collection
+db.myCollection.dropIndex("index_name")
+ 
 
 //start mongodb 
 mongod --dbpath data
